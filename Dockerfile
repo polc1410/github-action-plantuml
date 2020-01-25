@@ -15,7 +15,7 @@ LABEL "maintainer"="Loki Coyote <lokkju@gmail.com>"
 RUN apk add --virtual planuml-deps --no-cache graphviz ttf-droid ttf-droid-nonlatin curl \
     && mkdir /app \
     && curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /app/plantuml.jar \
-    && apk del curl
+    && apk del curl \
     && apt install texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended pandoc texlive-extra-utils texlive-latex-extra texlive-latex-recommended texlive-generic-recommended
           
 
