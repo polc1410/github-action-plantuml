@@ -16,7 +16,7 @@ RUN apk add --virtual planuml-deps --no-cache graphviz ttf-droid ttf-droid-nonla
     && mkdir /app \
     && curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /app/plantuml.jar \
     && apk del curl \
-    && apt install texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended pandoc texlive-extra-utils texlive-latex-extra texlive-latex-recommended texlive-generic-recommended
+    && apk add texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended pandoc texlive-extra-utils texlive-latex-extra texlive-latex-recommended texlive-generic-recommended
           
 
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
